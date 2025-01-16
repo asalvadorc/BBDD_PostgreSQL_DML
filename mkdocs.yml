@@ -1,0 +1,25 @@
+site_url : https://github.com/asalvadorc/BBDD_POSTGRES_DML
+site_name: BD - Bases de Dades
+theme: 
+  name: readthedocs
+  logo: assets/logocaminas.png
+
+extra_css:
+  - css/extra.css
+  - img/favicon.ico 
+
+markdown_extensions:
+  - admonition
+  - pymdownx.emoji
+  - pymdownx.extra
+  - pymdownx.superfences
+  - tables    
+  - attr_list
+  - toc 
+
+nav:
+- POSTGRESQL - DML :
+    - 1. Introducció: 1_introducci.md
+    - 2. Consultes d'actualització (DML): 2_consultes_dactualitzaci.md
+    - Exercicis del tot el tema: exercicis_de_tot_el_tema.md
+    
