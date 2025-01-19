@@ -145,7 +145,7 @@ Consulteu la sentència SELECT, l'apartat "Especificació d'una B.D. externa".
         SELECT * FROM EMPLEAT2  
         WHERE departament IN (6,7);
 
-  3) Inserir en la taula EMPLEAT3 els empleats que tenen més d'un familiar. Aquesta sentència no la podrem executar, ja que no tenim la taula **FAMILIAR**. Està únicament de manera il·lustrativa.
+  3) Inserir en la taula EMPLEAT3 els empleats que tenen més d'un familiar. Aquesta sentència **no la podrem executar**{.rojo}, ja que no tenim la taula **FAMILIAR**. Està únicament de manera il·lustrativa.
 
 
       INSERT INTO EMPLEAT3  
@@ -255,7 +255,7 @@ seguretat de les taules o de tota la Base de Dades.
       DELETE FROM EMPLEAT3  
         WHERE EXTRACT(year FROM AGE(CURRENT_DATE,data_naixement) )>=47;
 
-  4) Esborrar d'EMPLEAT aquells empleats que trebalen en projectes menys de 20 hores (no es molt convenient confirmar l'eliminació dels registres ja que ens quedaríem sense dades importants)
+  4) Esborrar d'EMPLEAT aquells empleats que trebalen en projectes menys de 20 hores **(no es molt convenient confirmar l'eliminació dels registres, ja que ens quedaríem sense dades importants)**{.rojo}
 
       DELETE FROM EMPLEAT  
         WHERE dni IN (SELECT dni  
