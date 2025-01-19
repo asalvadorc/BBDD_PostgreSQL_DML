@@ -157,8 +157,15 @@ Consulteu la sentència SELECT, l'apartat "Especificació d'una B.D. externa".
 
 ### :pencil2: Exercicis
 
-En **f_grup_9999x** (on grup és el vostre grup, 9999 són les 4 últimes xifres
-del vostre DNI, i x la lletra del NIF)
+Com ja s'ha comentat a la introducció, i per no interferir entre nosaltres, cadascú es connectarà a la seua Base de Dades **f_grup_9999x** (on grup és el vostre grup p.ex. 1cfsg, 1cfsh... , 9999 són
+les 4 últimes xifres del vostre DNI, i x la lletra del NIF).
+
+
+L'esquema Entitat-Relació i l'esquema relacional és el següent:
+
+![](factura.png)
+
+
 
 **Ex_1** - Inserir en la taula **CATEGORIA** les següents files:
 
