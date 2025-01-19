@@ -17,7 +17,7 @@ el seu contingut:
   * **UPDATE** , per a modificar el contigut d'una o més files ja existents.
 
 
-Durant tota aquesta part de SQL farem consultes per a crear o modificar taules, o per a modificar les dades de les taules.
+Durant tota aquesta part de SQL farem consultes per a modificar les dades de les taules.
 
 No ens convé en absolut treballar sobre la Base de Dades **geo** ni sobre
 **factura** , ja que el que faríem seria "boicotejar-nos" entre nosaltres.
