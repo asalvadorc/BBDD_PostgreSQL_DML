@@ -75,8 +75,8 @@ fer-ho amb la sentència **ALTER SEQUENCE**.
   4) Introduir 3 empleats en la taula EMPLEAT2, amb els valors següents (la taula **EMPLEAT2** la vam crear en la segona sentència d'exemple de la pregunta 3.2.2, CREATE TABLE):
 
   * Dni: **44444444d** ; Nom: **David** ; Departament: **6** ; Sou: **1000**
-  * Dni: **55555555e** ; Nom: **Elena** ; Departament:****6**** ; Sou: **1500**
-  * Dni: **66666666f** ; Nom: **Ferran** ; Departament:****7**** ; Sou: **1750**
+  * Dni: **55555555e** ; Nom: **Elena** ; Departament: **6** ; Sou: **1500**
+  * Dni: **66666666f** ; Nom: **Ferran** ; Departament:**7** ; Sou: **1750**
 
         INSERT INTO EMPLEAT2 (dni,nom,departament,sou)  
           VALUES ('44444444d ','David ',6,1000) , 
@@ -319,9 +319,7 @@ de tota la Base de Dades.
 
       UPDATE EMPLEAT3  
       SET departament=8,  
-
-> > poblacio='Ares'
-
+      poblacio='Ares'
       WHERE poblacio='Castelló';
 
 ### :pencil2: Exercicis
