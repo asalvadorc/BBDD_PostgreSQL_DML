@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/asalvadorc/BBDD_POSTGRES_DML/exercicis_de_tot_el_tema/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Exercicis del tot el tema - BD - Bases de Dades</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+        <link href="../img/favicon.ico" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Exercicis del tot el tema";
+        var mkdocs_page_input_path = "exercicis_de_tot_el_tema.md";
+        var mkdocs_page_url = "/asalvadorc/BBDD_POSTGRES_DML/exercicis_de_tot_el_tema/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../assets/logocaminas.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">POSTGRESQL - DML</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../1_introducci/">1. Introducció</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../2_consultes_dactualitzaci/">2. Consultes d'actualització (DML)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Exercicis del tot el tema</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">BD - Bases de Dades</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">POSTGRESQL - DML</li>
+      <li class="breadcrumb-item active">Exercicis del tot el tema</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="exercicis-de-tot-el-tema">Exercicis de tot el tema</h1>
+<p>Com ja s'ha comentat a la introducció, i per no interferir entre nosaltres, cadascú es connectarà a la seua Base de Dades <strong>f_grup_9999x</strong> (on grup és el vostre grup p.ex. 1cfsg, 1cfsh... , 9999 són
+les 4 últimes xifres del vostre DNI, i x la lletra del NIF).</p>
+<p>L'esquema Entitat-Relació i l'esquema relacional és el següent:</p>
+<p><img alt="" src="../factura.png" /></p>
+<p>En la Base de Dades anomenada <strong>f_grup_9999x</strong> (on grup és el vostre grup,
+9999 són les 4 últimes xifres del vostre DNI, i x la lletra del NIF),
+connectant com un usuari amb el mateix nom i contrasenya:</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Durant tots aquestos exercicis de DML pot ser molt convenient tenir obertes
+  les dues connexions: la de <strong>FACTURA</strong> (per anar consultant) i la de
+  <strong>f_grup_9999x</strong>, on grup és el vostre grup,
+  9999 són les 4 últimes xifres del vostre DNI, i x la lletra del NIF.</p>
+</div>
+<p><strong>Ex_1</strong> - Inserir en la taula <strong>CATEGORIA</strong> les següents files:</p>
+<table>
+<thead>
+<tr>
+<th><strong>cod_cat</strong></th>
+<th><strong>descripcio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BjcOlimpia</td>
+<td>Components Bjc Seria Olimpia</td>
+</tr>
+<tr>
+<td>Legrand</td>
+<td>Components marca Legrand</td>
+</tr>
+<tr>
+<td>IntMagn</td>
+<td>Interruptor Magnetotérmico</td>
+</tr>
+<tr>
+<td>Niessen</td>
+<td>Components Niesen Serie Lisa</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ex_2</strong> - Inserir els següents articles.</p>
+<table>
+<thead>
+<tr>
+<th><strong>cod_art</strong></th>
+<th><strong>descrip</strong></th>
+<th><strong>preu</strong></th>
+<th><strong>stock</strong></th>
+<th><strong>stock_min</strong></th>
+<th><strong>cod_cat</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B10028B</td>
+<td>Cruzamiento Bjc Serie Olimpia</td>
+<td>4.38</td>
+<td>2</td>
+<td>1</td>
+<td>BjcOlimpia</td>
+</tr>
+<tr>
+<td>B10200B</td>
+<td>Cruzamiento Bjc Olimpia Con Visor</td>
+<td>0.88</td>
+<td>29</td>
+<td></td>
+<td>BjcOlimpia</td>
+</tr>
+<tr>
+<td>L16550</td>
+<td>Cartucho Fusible Legrand T2 250 A</td>
+<td>5.89</td>
+<td>1</td>
+<td>1</td>
+<td>Legrand</td>
+</tr>
+<tr>
+<td>L16555</td>
+<td>Cartucho Fusible Legrand T2 315 A</td>
+<td>5.89</td>
+<td>3</td>
+<td>3</td>
+<td>Legrand</td>
+</tr>
+<tr>
+<td>IM2P10L</td>
+<td>Interruptor Magnetotermico 2p, 4</td>
+<td>14.84</td>
+<td>2</td>
+<td>1</td>
+<td>IntMagn</td>
+</tr>
+<tr>
+<td>N8008BA</td>
+<td>Base Tt Lateral Niessen Trazo Bla</td>
+<td>4.38</td>
+<td>6</td>
+<td>6</td>
+<td>Niessen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ex_3</strong> - Inserir en la taula <strong>CLIENT</strong> tres files amb les següents dades</p>
+<table>
+<thead>
+<tr>
+<th><strong>cod_cli</strong></th>
+<th><strong>nom</strong></th>
+<th><strong>adreca</strong></th>
+<th><strong>cp</strong></th>
+<th><strong>cod_pob</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>303</td>
+<td>MIRAVET SALA, MARIA MERCEDES</td>
+<td>URBANIZACION EL BALCO, 84-11</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>306</td>
+<td>SAMPEDRO SIMO, MARIA MERCEDES</td>
+<td>FINELLO, 161</td>
+<td>12217</td>
+<td></td>
+</tr>
+<tr>
+<td>387</td>
+<td>TUR MARTIN, MANUEL FRANCISCO</td>
+<td>CALLE PEDRO VIRUELA, 108-8</td>
+<td>12008</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ex_4</strong> - Inserir la següent factura:</p>
+<table>
+<thead>
+<tr>
+<th><strong>num_f</strong></th>
+<th><strong>data</strong></th>
+<th><strong>cod_cli</strong></th>
+<th><strong>cod_ven</strong></th>
+<th><strong>iva</strong></th>
+<th><strong>dte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6535</td>
+<td>2015-01-01</td>
+<td>306</td>
+<td></td>
+<td>21</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>num_f</strong></th>
+<th><strong>num_l</strong></th>
+<th><strong>cod_art</strong></th>
+<th><strong>quant</strong></th>
+<th><strong>preu</strong></th>
+<th><strong>dte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6535</td>
+<td>1</td>
+<td>L16555</td>
+<td>2</td>
+<td>5.89</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ex_5</strong> - Inserir la següent factura (aquesta té més d'una línia de factura).</p>
+<table>
+<thead>
+<tr>
+<th><strong>num_f</strong></th>
+<th><strong>data</strong></th>
+<th><strong>cod_cli</strong></th>
+<th><strong>cod_ven</strong></th>
+<th><strong>iva</strong></th>
+<th><strong>dte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6559</td>
+<td>2015-02-16</td>
+<td>387</td>
+<td></td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>num_f</strong></th>
+<th><strong>num_l</strong></th>
+<th><strong>cod_art</strong></th>
+<th><strong>quant</strong></th>
+<th><strong>preu</strong></th>
+<th><strong>dte</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6559</td>
+<td>1</td>
+<td>IM2P10L</td>
+<td>3</td>
+<td>14.84</td>
+<td></td>
+</tr>
+<tr>
+<td>6559</td>
+<td>2</td>
+<td>N8008BA</td>
+<td>6</td>
+<td>4.38</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ex_6</strong> - Esborrar la factura <strong>6559</strong>. Comprovar que també s'han esborrat les
+seues línies de factura</p>
+<p><strong>Ex_7</strong> - Esborrar els articles dels quals <strong>no</strong> tenim<strong>stock mínim</strong>.</p>
+<p><strong>Ex_8</strong> - Llevar tots els codis postals dels clients.</p>
+<p><strong>Ex_9</strong> - Pujar el preu dels articles de la categoria <strong>BjcOlimpia</strong> un <strong>5%</strong>
+(el resultat serà que l'únic article d'aquesta categoria haurà passat d'un
+preu de 4.38 a <strong>4.60€</strong>)</p>
+<p>Llicenciat sota la  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Llicència Creative Commons Reconeixement NoComercial
+CompartirIgual 3.0</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../2_consultes_dactualitzaci/" class="btn btn-neutral float-left" title="2. Consultes d'actualització (DML)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../2_consultes_dactualitzaci/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
