@@ -318,8 +318,7 @@ de tota la Base de Dades.
   3) Canviar la població a Ares i el departament al 8, a tots els empleats de Castelló de la taula EMPLEAT3
 
       UPDATE EMPLEAT3  
-      SET departament=8,  
-      poblacio='Ares'
+      SET departament=8, poblacio='Ares'
       WHERE poblacio='Castelló';
 
 ### :pencil2: Exercicis
